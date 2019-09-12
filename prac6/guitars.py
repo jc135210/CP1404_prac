@@ -1,4 +1,4 @@
-from prac6.guitar import guitar
+from prac6.guitar import Guitar
 
 
 def main():
@@ -7,7 +7,7 @@ def main():
     while name != "":
         year = int(input("Year: "))
         cost = float(input("Cost: "))
-        guitar_added = guitar(name, year, cost)
+        guitar_added = Guitar(name, year, cost)
         my_guitars.append(guitar_added)
         print("{} added".format(guitar_added))
         name = input("Name: ")
