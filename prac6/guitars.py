@@ -13,11 +13,12 @@ def main():
         name = input("Name: ")
 
     print("These are my guitars:")
-    for i, item in enumerate(my_guitars):
+    for i, my_guitar in enumerate(my_guitars):
         vintage_string = ""
-        if item.is_vintage():
+        if my_guitar.is_vintage():
             vintage_string = '(vintage)'
-        print("Guitar {}: {} ({}), worth ${:.2f} {}".format(i + 1, item.name, item.year, item.cost, vintage_string))
+        print("Guitar {}: {} ({}), worth ${:.2f} {}".format(i + 1, my_guitar.name, my_guitar.year, my_guitar.cost,
+                                                            vintage_string))
 
 
 main()
