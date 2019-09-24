@@ -16,8 +16,8 @@ def main():
     for i, my_guitar in enumerate(my_guitars):
         vintage_string = ""
         if my_guitar.is_vintage():
-            vintage_string = '(vintage)'
-        print("Guitar {}: {} ({}), worth ${:.2f} {}".format(i + 1, my_guitar.name, my_guitar.year, my_guitar.cost,
+            vintage_string = ' (vintage)'
+        print("Guitar {}: {} ({}), worth ${:.2f}{}".format(i + 1, my_guitar.name, my_guitar.year, my_guitar.cost,
                                                             vintage_string))
 
 
