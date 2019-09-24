@@ -6,23 +6,23 @@ BoxLayout:
             id: input_miles
             text: "0"
             font_size: 48
-    #        on_text: app.handle_calculate()
+            on_text: app.handle_calculate(self.text)
         BoxLayout:
             orientation: 'vertical'
             size_hint_x: 0.25
             Button:
                 id: up_button
                 text: "UP"
-                on_press: app.handle_increment(+1)
+                on_press: app.handle_increment(input_miles.text,+1)
             Button:
                 id: down_button
                 text: "DOWN"
-                on_press: app.handle_increment(-1)
-    Button:
-        id: convert_button
-        text: "Convert miles to kms"
-        on_press: app.handle_calculate()
+                on_press: app.handle_increment(input_miles.text,-1)
+#    Button:
+#        id: convert_button
+#        text: "Convert miles to kms"
+#        on_press: app.handle_calculate(input_miles.text)
     Label:
         id: output_label
+        text: app.output_message
         font_size: 48
-        text: ""
